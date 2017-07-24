@@ -4,7 +4,7 @@ class Gnome extends React.Component{
 
     handleEditGnome=(gnome)=>{
         if(typeof this.props.editGnome ==='function'){
-                this.props.editGnome(gnome)
+                this.props.editGnome(gnome) //pass to GnomeList gnome to edit
             }
     }
     render(){
