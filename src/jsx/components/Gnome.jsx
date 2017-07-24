@@ -19,7 +19,7 @@ class Gnome extends React.Component{
                     className="gnomeList_gnome_age">{this.props.gnome.age}</div>
                     <div className="gnomeList_gnome_healthBar"></div>
                     <div 
-                    className="gnomeList_gnome_strenght">{this.props.gnome.strenght}+{'/100'}
+                    className="gnomeList_gnome_strenght">{this.props.gnome.strenght}{'/100'}
                     <span className="gnomeList_gnome_strenght_innerText">strength</span>
                     </div>
                 </li>
