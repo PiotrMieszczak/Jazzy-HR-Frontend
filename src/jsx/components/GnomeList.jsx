@@ -1,6 +1,8 @@
 import React from "react";
 import Gnome from "./Gnome.jsx";
 import LoadMore from "./LoadMore.jsx";
+import EditGnome from "./EditGnome.jsx";
+
 class GnomeList extends React.Component{
         constructor(props){
             super(props);
@@ -44,6 +46,11 @@ class GnomeList extends React.Component{
             editedGnom: gnome,
         })
     }
+    handleCloseForm = ()=>{
+        this.setState({
+            displayForm: false,
+        })
+    }
 
     handleLoadMoreGnomes = ()=>{
         let nextGnomes = this.state.limit;
@@ -59,9 +66,9 @@ class GnomeList extends React.Component{
                 gnome={gnome}/>
             })
 
-            // if(this.state.displayForm){
-            //     return <EditGnome gn={this.state.gnome}/>
-            // }
+            if(this.state.displayForm){
+                return <EditGnome gn={this.state.editedGnome}/>
+            }
             return <section> 
                     <ul className="gnomeList">
                         {gnomes}
