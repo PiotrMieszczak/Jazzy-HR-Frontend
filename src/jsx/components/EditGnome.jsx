@@ -12,36 +12,49 @@ class EditGnome extends React.Component{
 
     handleChangeName=(e)=>{
         this.setState({
-            newName: event.target.value,
+            newName: e.target.value,
         })
     }
     handleChangeAge=(e)=>{
         this.setState({
-            newAge: event.target.value,
+            newAge: e.target.value,
         })
     }
     handleChangeStr=(e)=>{
         this.setState({
-            newStr: event.target.value,
+            newStr: e.target.value,
         })
+    }
+    handleUploadData=()=>{
+
     }
 
     render(){
+
         return <form>
-            <label key={'gnomeNameLabel'} htmlFor="name">Gnome name:</label>
+            <label key={'gnomeNameLabel'} htmlFor="name"><span>Name: {this.props.gn.name}</span><br/>New name:</label>
             <input 
+            onChange={this.handleChangeName}
             value={this.state.newName}
-            defaultValue={this.props.gn.name}
-            key={'gnomeName'} type="text" name="name"/>
-            <label key={'gnomeAgeLabel'} htmlFor="age">Gnome name:</label>
+            key={'gnomeName'} type="text" name="name"/><br/>
+            
+            <label key={'gnomeAgeLabel'} htmlFor="age">
+            <span>Age: {this.props.gn.age}</span><br/>
+            New age:</label>
             <input 
-            defaultValue={this.props.gn.age}
-            key={'gnomeAge'} type="text" name="age"/>
-            <label key={'gnomeStrLabel'} htmlFor="str">Strenght:</label>
+            value={this.state.newAge}
+            onChange={this.handleChangeAge}
+            key={'gnomeAge'} type="text" name="age"/><br/>
+            <label key={'gnomeStrLabel'} htmlFor="str">
+            <span>Strenght: {this.props.gn.strenght}</span><br/>
+            New strenght:</label>
             <input 
-            defaultValue={this.props.gn.strenght}
-            key={'gnomeStr'} type="text" name="str"/>
+            value={this.state.newStr}
+            onChange={this.handleChangeStr}
+            key={'gnomeStr'} type="text" name="str"/><br/>
+            
             <input 
+            onClick={this.handleUploadData}
             type="submit" value="SAVE"/>
         </form>    
     }
