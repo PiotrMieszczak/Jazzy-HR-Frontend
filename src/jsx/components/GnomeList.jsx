@@ -31,7 +31,7 @@ class GnomeList extends React.Component{
                         limit,
                     })
 
-            }).catch(function (error) {  
+            }).catch( error=> {  
                 console.log('Request failed', error);  
             });
         }
