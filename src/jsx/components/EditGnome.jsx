@@ -10,6 +10,22 @@ class EditGnome extends React.Component{
         }
     }
 
+    handleChangeName=(e)=>{
+        this.setState({
+            newName: event.target.value,
+        })
+    }
+    handleChangeAge=(e)=>{
+        this.setState({
+            newAge: event.target.value,
+        })
+    }
+    handleChangeStr=(e)=>{
+        this.setState({
+            newStr: event.target.value,
+        })
+    }
+
     render(){
         return <form>
             <label key={'gnomeNameLabel'} htmlFor="name">Gnome name:</label>
