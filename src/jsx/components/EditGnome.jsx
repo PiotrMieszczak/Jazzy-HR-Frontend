@@ -25,6 +25,12 @@ class EditGnome extends React.Component{
             newStr: e.target.value,
         })
     }
+
+    closeForm =()=>{
+        if(typeof this.props.closeForm ==='function'){
+            this.props.closeForm();
+        }
+    }
     handleUploadData=(e)=>{
         e.preventDefault();
         const url = "http://master.datasource.jazzy-hr.jzapp.io/api/v1/gnomes"
@@ -42,12 +48,15 @@ class EditGnome extends React.Component{
                     } else {
                         throw new Error("error");
                     }
-        }).then(  function (d) {  
-            console.log('Request succeeded with JSON response', d);  
+        }).then(  d=> {  
+            console.log('Request succeeded with JSON response', d);
+            this.closeForm();   //close form, after uploading data
         })  
-        .catch(function (error) {  
+        .catch(error=> {  
             console.log('Request failed', error);  
         });
+
+        
     }
 
     render(){

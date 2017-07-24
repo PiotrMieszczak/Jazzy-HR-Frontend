@@ -68,7 +68,9 @@ class GnomeList extends React.Component{
             })
 
             if(this.state.displayForm){
-                return <EditGnome gn={this.state.editedGnome}/>
+                return <EditGnome
+                        closeForm={this.handleCloseForm}
+                        gn={this.state.editedGnome}/>
             }
             return <section> 
                     <ul className="gnomeList">
