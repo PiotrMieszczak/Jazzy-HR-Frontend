@@ -1,8 +1,15 @@
 import React from "react";
 
 class Gnome extends React.Component{
+
+    handleEditGnome=(gnome)=>{
+        if(typeof this.props.editGnome ==='function'){
+                this.props.editGnome(gnome)
+            }
+    }
     render(){
             return <li key={this.props.gnome.id}
+                    onClick={e=>this.handleEditGnom(this.props.gnome)}
                     className="gnomeList_gnome">
                     <div
                     className="gnomeList_gnome_logo"></div>
