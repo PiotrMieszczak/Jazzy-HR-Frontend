@@ -17,7 +17,7 @@ class GnomeList extends React.Component{
 
     loadData(limit){
 
-            const url = "http://master.datasource.jazzy-hr.jzapp.io/api/v1/gnomes?_format=json"
+            const url = "http://master.datasource.jazzy-hr.jzapp.io/api/v1/gnomes?"
             fetch(url+`&limit=${limit}&offset=0`)
             .then(response => {
                     if(response.ok) { 
@@ -31,9 +31,9 @@ class GnomeList extends React.Component{
                         limit,
                     })
 
-            }).catch( err => {
-                console.log("Błąd", err);
-            })
+            }).catch(function (error) {  
+                console.log('Request failed', error);  
+            });
         }
     
     componentDidMount(){
