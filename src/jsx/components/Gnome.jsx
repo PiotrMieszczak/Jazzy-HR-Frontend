@@ -7,9 +7,9 @@ class Gnome extends React.Component{
                 this.props.editGnome(gnome) //pass to GnomeList gnome to edit
             }
     }
-    render(){
+    render(){ 
             return <li key={this.props.gnome.id}
-                    onClick={e=>this.handleEditGnom(this.props.gnome)}
+                    onClick={e=>this.handleEditGnome(this.props.gnome)}
                     className="gnomeList_gnome">
                     <div
                     className="gnomeList_gnome_logo"></div>

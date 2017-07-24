@@ -1,5 +1,5 @@
 import React from "react";
-
+import Gnome from "./Gnome.jsx";
 class GnomeList extends React.Component{
         constructor(props){
             super(props);
@@ -10,7 +10,7 @@ class GnomeList extends React.Component{
                 limit: 100, //initial limit for fetched data
                 loaded: false, //if false display Spinner
             }
-        }
+        } 
 
     loadData(limit){
 
@@ -23,7 +23,6 @@ class GnomeList extends React.Component{
                         throw new Error("error");
                     }
             }).then( response => {
-                console.log(response);
                     this.setState({
                         response,
                         limit,
@@ -33,24 +32,32 @@ class GnomeList extends React.Component{
                 console.log("Błąd", err);
             })
         }
+    
     componentDidMount(){
-        this.loadData(this.state.limit);
+        this.loadData(this.state.limit); //load first 100 gnomes when component did mount
+    }
+
+    handleEditGnome = (gnome)=>{
+        this.setState({
+            displayForm: true,
+            editedGnom: gnome,
+        })
     }
 
     render(){
-            console.log(this.state.response);
+            let gnomes = [...this.state.response].map( gnome =>{
+                return <Gnome
+                editGnome={this.handleEditGnome}
+                key={gnome.id} 
+                gnome={gnome}/>
+            })
 
-            // let gnomes = [...this.state.response].map( gnome =>{
-            //     return <Gnome
-            //     key={gnome.id} 
-            //     gnome={gnome}/>
-            // })
             // if(this.state.displayForm){
             //     return <EditGnome gn={this.state.gnome}/>
             // }
             return <section> 
-                    <ul>
-                        {/*{gnomes}*/}
+                    <ul className="gnomeList">
+                        {gnomes}
                     </ul>
                     {/*<LoadMore more={this.handleLoadMoreGnomes}/>*/}
                </section>        

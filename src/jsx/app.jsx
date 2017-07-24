@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Header from "./components/Header.jsx";
-// import GnomeList from "components/GnomeList.jsx";
+import GnomeList from "./components/GnomeList.jsx";
 
 document.addEventListener("DOMContentLoaded", function(){
  
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function(){
         render(){ 
             return <div>    
                    <Header />
-                   {/*<GnomeList />*/}
+                   <GnomeList />
                 </div>                   
         }           
    
