@@ -25,8 +25,29 @@ class EditGnome extends React.Component{
             newStr: e.target.value,
         })
     }
-    handleUploadData=()=>{
-
+    handleUploadData=(e)=>{
+        e.preventDefault();
+        const url = "http://master.datasource.jazzy-hr.jzapp.io/api/v1/gnomes"
+        let data = {
+            name: this.state.newName,
+            age: this.state.newAge,
+            strenght: this.state.newStrenght,
+        }
+        fetch(url+`/${this.props.gn.id}`,
+            {method: 'PATCH',
+            body: JSON.stringify(data)
+        }).then(response => {
+                    if(response.ok) { 
+                        return response.json()
+                    } else {
+                        throw new Error("error");
+                    }
+        }).then(  function (d) {  
+            console.log('Request succeeded with JSON response', d);  
+        })  
+        .catch(function (error) {  
+            console.log('Request failed', error);  
+        });
     }
 
     render(){
