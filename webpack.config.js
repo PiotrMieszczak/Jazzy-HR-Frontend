@@ -3,7 +3,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     entry: {
         'dist/app.js': ['whatwg-fetch', './src/jsx/app.jsx'],
-        'dist/main.css~': './src/scss/main.scss'
+        'dist/main.css': './src/scss/main.scss'
     },
     output : {
         path: __dirname+'/',
@@ -19,7 +19,7 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'babel-loader',
                 query: {
-                    presets: ['es2015', 'stage-2','react']
+                    presets: ['es2015', 'stage-2' ,'react']
                 }
             },
             {
@@ -40,7 +40,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin('./dist/style.css'),
+        new ExtractTextPlugin('./dist/main.css'),
     ]
 
 
