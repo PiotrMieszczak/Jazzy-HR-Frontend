@@ -7,7 +7,7 @@ class GnomeList extends React.Component{
                 response: [], //keeps response from API
                 displayForm: false, 
                 editedGnome: {}, 
-                limit: 500, //initial limit for fetched data
+                limit: 100, //initial limit for fetched data
                 loaded: false, //if false display Spinner
             }
         }
@@ -23,6 +23,7 @@ class GnomeList extends React.Component{
                         throw new Error("error");
                     }
             }).then( response => {
+                console.log(response);
                     this.setState({
                         response,
                         limit,
@@ -31,6 +32,28 @@ class GnomeList extends React.Component{
             }).catch( err => {
                 console.log("Błąd", err);
             })
+        }
+    componentDidMount(){
+        this.loadData(this.state.limit);
+    }
+
+    render(){
+            console.log(this.state.response);
+
+            // let gnomes = [...this.state.response].map( gnome =>{
+            //     return <Gnome
+            //     key={gnome.id} 
+            //     gnome={gnome}/>
+            // })
+            // if(this.state.displayForm){
+            //     return <EditGnome gn={this.state.gnome}/>
+            // }
+            return <section> 
+                    <ul>
+                        {/*{gnomes}*/}
+                    </ul>
+                    {/*<LoadMore more={this.handleLoadMoreGnomes}/>*/}
+               </section>        
         }
 
     
