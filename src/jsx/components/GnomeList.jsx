@@ -43,8 +43,9 @@ class GnomeList extends React.Component{
     handleEditGnome = (gnome)=>{
         this.setState({
             displayForm: true,
-            editedGnom: gnome,
+            editedGnome: gnome,
         })
+
     }
     handleCloseForm = ()=>{
         this.setState({
