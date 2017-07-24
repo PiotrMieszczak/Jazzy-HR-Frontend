@@ -1,5 +1,6 @@
 import React from "react";
 import Gnome from "./Gnome.jsx";
+import LoadMore from "./LoadMore.jsx";
 class GnomeList extends React.Component{
         constructor(props){
             super(props);
@@ -44,6 +45,12 @@ class GnomeList extends React.Component{
         })
     }
 
+    handleLoadMoreGnomes = ()=>{
+        let nextGnomes = this.state.limit;
+        nextGnomes += 100; 
+        this.loadData(nextGnomes); //get 200/300/400 gnomes on button click
+    }
+
     render(){
             let gnomes = [...this.state.response].map( gnome =>{
                 return <Gnome
@@ -59,7 +66,7 @@ class GnomeList extends React.Component{
                     <ul className="gnomeList">
                         {gnomes}
                     </ul>
-                    {/*<LoadMore more={this.handleLoadMoreGnomes}/>*/}
+                    <LoadMore moreGnomes={this.handleLoadMoreGnomes}/>
                </section>        
         }
 

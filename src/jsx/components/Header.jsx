@@ -2,7 +2,6 @@ import React from "react";
 
 class Header extends React.Component{
     render(){
-        console.log('header')
         return  <header className="navbar">
                 <div className="navbar_logo">logo</div>    
                 <div className="navbar_monsterType">
