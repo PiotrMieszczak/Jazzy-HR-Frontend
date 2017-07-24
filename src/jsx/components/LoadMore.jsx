@@ -14,3 +14,5 @@ class LoadMore extends React.Component{
         }
 }
 
+
+module.exports = LoadMore;
