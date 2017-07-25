@@ -4,20 +4,23 @@ class Header extends React.Component{
     render(){
         return  <header>
                     <div className="container">
-                        <nav>
-                        <ul className="navbar">
-                            <li className="navbar_logo">logo</li>    
-                            <li className="navbar_monsterType">
-                                <div className="navbar_monsterType_innerText">gnomes</div>
-                                <div className="navbar_monsterType_innerText">trolls</div>
-                            </li>       
-                            <li className="header_buttonWrapper">
-                                <div className="button button--createMonster">create monster</div>
-                            </li>    
-                            <li className="header_avatar"></li>
-                        </ul>
-                    </nav>
-                </div> 
+                        <nav className="navbar">
+                            <div className="navbar_leftDiv">
+                                <img className="navbar_leftDiv_logo" src="src/assets/logo.png" alt="logo_pic"/>
+                                <div className="navbar_leftDiv_monsterTypeWrapper">
+                                    <div className="navbar_leftDiv_monsterType">gnomes</div>
+                                    <div className="navbar_leftDiv_monsterType">trolls</div>
+                                </div>
+                            </div>
+                            <div className="navbar_rightDiv">
+                                <div className="navbar_rightDiv_button">create monster</div>
+                                <div className="navbar_rightDiv_avatarWrapper">
+                                    <img className="navbar_rightDiv_Img" src="src/assets/avatar.png" alt="avatar_pic"/>
+                                    <div className="navbar_rightDiv_Info">robert łabuś<br/>game master</div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div> 
             </header>
     }
 }
