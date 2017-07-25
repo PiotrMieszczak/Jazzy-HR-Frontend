@@ -62,32 +62,32 @@ class EditGnome extends React.Component{
     render(){
 
         return <div className="container">
-            <form className="editgnome">
+            <form className="editGnome">
+
                 <label className="editgnome_label"
-                key={'gnomeNameLabel'} htmlFor="name"><span>Name: {this.props.gn.name}</span><br/>
-                <span className="boldText">New name:</span></label>
+                key={'gnomeNameLabel'} htmlFor="name"><span>Name: {this.props.gn.name}</span></label>
                 <input 
                 onChange={this.handleChangeName}
                 value={this.state.newName}
-                key={'gnomeName'} type="text" name="name"/><br/>
-                
+                key={'gnomeName'} type="text" name="name" placeholder="New name"/>
+
                 <label className="editgnome_label"
-                 key={'gnomeAgeLabel'} htmlFor="age">
-                <span>Age: {this.props.gn.age}</span><br/>
-                <span className="boldText">New age:</span></label>
+                key={'gnomeAgeLabel'} htmlFor="age">
+                <span>Age: {this.props.gn.age}</span></label>
                 <input 
                 value={this.state.newAge}
                 onChange={this.handleChangeAge}
-                key={'gnomeAge'} type="text" name="age"/><br/>
+                key={'gnomeAge'} type="text" name="age" placeholder="New age"/>
+ 
+
                 <label className="editgnome_label"
                 key={'gnomeStrLabel'} htmlFor="str">
-                <span>Strenght: {this.props.gn.strenght}</span><br/>
-                <span className="boldText">New strenght:</span></label>
+                <span>Strenght: {this.props.gn.strenght}</span></label>
                 <input 
                 value={this.state.newStr}
                 onChange={this.handleChangeStr}
-                key={'gnomeStr'} type="text" name="str"/><br/>
-                
+                key={'gnomeStr'} type="text" name="str" placeholder="New strenght"/>
+
                 <input 
                 className="button"
                 onClick={this.handleUploadData}

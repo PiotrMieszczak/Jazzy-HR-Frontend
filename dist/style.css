@@ -3,14 +3,29 @@
   padding: 0;
   box-sizing: border-box; }
 
+.clearfix::after {
+  content: " ";
+  display: block;
+  clear: both; }
+
+.button {
+  border: 1px solid #AF0075;
+  border-radius: 5px;
+  background: #AF0075;
+  color: white;
+  text-align: center;
+  padding: 0 3%;
+  display: inline-block;
+  line-height: 2em;
+  font-size: 15px; }
+
+.loadMore {
+  margin-left: 40%; }
+
 header {
   background: white;
-  margin-bottom: 5vh; }
-
-.navbar:after {
-  content: "";
-  display: table;
-  clear: both; }
+  margin-bottom: 10vh;
+  padding: 1%; }
 
 .navbar .navbar_div {
   display: flex;
@@ -33,13 +48,7 @@ header {
   justify-content: flex-end; }
   .navbar .navbar_div--right .navbar_div--right_button {
     align-self: center;
-    border: 1px solid #AF0075;
-    border-radius: 10px;
-    background: #AF0075;
-    color: white;
-    text-align: center;
-    margin-right: 10%;
-    padding: 10px; }
+    margin-right: 10%; }
   .navbar .navbar_div--right .navbar_div--right_avatarWrapper {
     display: flex; }
     .navbar .navbar_div--right .navbar_div--right_avatarWrapper .navbar_div--right_Img {
@@ -48,9 +57,75 @@ header {
     .navbar .navbar_div--right .navbar_div--right_avatarWrapper .navbar_div--right_Info {
       width: 10em; }
 
+.section_header {
+  margin-bottom: 5vh;
+  text-transform: capitalize; }
+
+.gnomeList {
+  list-style: none; }
+
+.gnomeList_gnome {
+  background: white;
+  margin-bottom: 0.5vh;
+  padding: 1% 2%; }
+  .gnomeList_gnome:first-of-type {
+    border-radius: 10px 10px 0 0; }
+  .gnomeList_gnome .gnomeList_gnome_div {
+    width: 30%;
+    display: flex; }
+  .gnomeList_gnome .gnomeList_gnome_div--left {
+    float: left;
+    justify-content: flex-start; }
+    .gnomeList_gnome .gnomeList_gnome_div--left .gnomeList_gnome_div_logo {
+      width: 60px;
+      height: 60px;
+      margin-right: 3%; }
+    .gnomeList_gnome .gnomeList_gnome_div--left .gnomeList_gnome_info {
+      align-self: center; }
+  .gnomeList_gnome .gnomeList_gnome_div--right {
+    float: right;
+    margin-top: 1.5em; }
+    .gnomeList_gnome .gnomeList_gnome_div--right .gnomeList_gnome_healthBarWrapper {
+      height: 10px;
+      border: 1px #EDEEF2;
+      background: #EDEEF2;
+      border-radius: 10px;
+      width: 100%;
+      align-self: center;
+      position: relative; }
+      .gnomeList_gnome .gnomeList_gnome_div--right .gnomeList_gnome_healthBarWrapper .gnomeList_gnome_healthBar {
+        height: 100%;
+        border-radius: 10px;
+        border: 1px solid #AF0075;
+        background: #AF0075;
+        position: absolute;
+        z-index: 2; }
+      .gnomeList_gnome .gnomeList_gnome_div--right .gnomeList_gnome_healthBarWrapper .gnomeList_gnome_healthBar_secondary {
+        height: 100%;
+        border-radius: 10px;
+        border: 1px solid #D8A6CB;
+        background: #D8A6CB;
+        position: absolute;
+        z-index: 1; }
+    .gnomeList_gnome .gnomeList_gnome_div--right .gnomeList_gnome_strenght {
+      font-size: 14px;
+      margin-left: 5%; }
+      .gnomeList_gnome .gnomeList_gnome_div--right .gnomeList_gnome_strenght .gnomeList_gnome_strenght_boldText {
+        font-size: 14px;
+        margin-left: 10%; }
+
+.editGnome {
+  display: flex;
+  margin-left: 30%;
+  background: white;
+  flex-direction: column; }
+
 body {
-  background: #F9FAFC; }
+  background: #EDEEF2; }
 
 .container {
   max-width: 1200px;
   margin: 0 auto; }
+
+.boldText {
+  font-weight: 700; }

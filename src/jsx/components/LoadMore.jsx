@@ -9,7 +9,7 @@ class LoadMore extends React.Component{
     }
     render(){
             return <button 
-                    className="button"
+                    className="button loadMore"
                     onClick={this.handleLoadMore}>Load More</button>
         }
 }
