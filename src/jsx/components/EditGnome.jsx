@@ -31,6 +31,7 @@ class EditGnome extends React.Component{
             this.props.closeForm();
         }
     }
+
     handleUploadData=(e)=>{
         e.preventDefault();
 
@@ -62,10 +63,12 @@ class EditGnome extends React.Component{
     }
 
     render(){
-        
         return <div className="container">
+            
             <form className="editGnome">
-                <div className="test"></div>
+                <div className="exitButton"
+                onClick={this.closeForm}
+                >&#10006;</div>
                 <label className="editGnome_label"
                 key={'gnomeNameLabel'} htmlFor="name"><span>Name: {this.props.gn.name}</span></label>
                 <input 
