@@ -6,6 +6,7 @@ class Gnome extends React.Component{
                 this.state={
                         healthBarWidth: '',
                         secondHealthBarWidth: '',
+                        nameColor: 'black',
                 }
         }
     handleEditGnome=(gnome)=>{
@@ -24,16 +25,29 @@ class Gnome extends React.Component{
         })
     }
 
-        
+    handleMouseEnter=()=>{
+            this.setState({
+                   nameColor:  '#AF0075',
+            })
+    }
+
+    handleMouseLeave=()=>{
+            this.setState({
+                   nameColor:  'black',
+            })
+    }
     render(){ 
             return <li key={this.props.gnome.id}
                     onClick={e=>this.handleEditGnome(this.props.gnome)}
+                    onMouseEnter={this.handleMouseEnter}
+                    onMouseLeave={this.handleMouseLeave}
                     className="gnomeList_gnome clearfix">
                         <div className="gnomeList_gnome_div gnomeList_gnome_div--left">
                                 <img className="gnomeList_gnome_div_logo" src="src/assets/gnome_logo.png" alt="gnome_logo"/>
                                 <div
                                 className="gnomeList_gnome_info">
-                                        <p className="boldText">{this.props.gnome.name}</p>
+                                        <p style={{color: this.state.nameColor}}
+                                        className="boldText">{this.props.gnome.name}</p>
                                         <p>Age:{" "}{this.props.gnome.age}</p>
                                 </div>
                         </div>
