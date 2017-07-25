@@ -72,11 +72,13 @@ class GnomeList extends React.Component{
                         closeForm={this.handleCloseForm}
                         gn={this.state.editedGnome}/>
             }
-            return <section> 
-                    <ul className="gnomeList">
-                        {gnomes}
-                    </ul>
-                    <LoadMore moreGnomes={this.handleLoadMoreGnomes}/>
+            return <section>
+                    <div className="container">
+                        <ul className="gnomeList">
+                            {gnomes}
+                        </ul>
+                        <LoadMore moreGnomes={this.handleLoadMoreGnomes}/>
+                    </div>
                </section>        
         }
 
