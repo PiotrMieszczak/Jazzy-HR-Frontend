@@ -7,7 +7,6 @@ class EditGnome extends React.Component{
             newName: '',
             newAge: '',
             newStr: '',
-            buttonColor: '#AF0075',
         }
     }
 
@@ -34,7 +33,7 @@ class EditGnome extends React.Component{
     }
     handleUploadData=(e)=>{
         e.preventDefault();
-        
+
         const url = "http://master.datasource.jazzy-hr.jzapp.io/api/v1/gnomes"
         let data = {
             name: this.state.newName,
