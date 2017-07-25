@@ -7,10 +7,26 @@ $container_width: 1200px;
 
 
 body{
-    background: #F9FAFC;
+    background: #EDEEF2;
 }
 .container{
     max-width: $container_width;
     margin: 0 auto;
 
+}
+
+.boldText{
+    font-weight: 700;
+}
+
+.button{
+    border: 1px solid #AF0075;
+    border-radius: 5px;
+    background: #AF0075;
+    color: white;
+    text-align: center;
+    padding: 0 5%;
+    display: inline-block;
+    line-height: 2em;
+    font-size:15px;
 }
