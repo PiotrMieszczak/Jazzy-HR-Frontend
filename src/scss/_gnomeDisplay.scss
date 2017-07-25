@@ -32,8 +32,8 @@
 
         .gnomeList_gnome_healthBarWrapper{
             height: 10px;
-            border: 1px $backgroundColor;
-            background: $backgroundColor;
+            border: 1px solid #{$secondHealthBarColor};
+            background: #{$secondHealthBarColor};
             border-radius:10px;
             width: 100%;
             align-self: center;
@@ -42,8 +42,8 @@
             .gnomeList_gnome_healthBar{
                 height: 100%;
                 border-radius:10px;
-                border:1px solid $buttons_healthBarColor;
-                background: $buttons_healthBarColor;
+                border:1px solid #{$buttons_healthBarColor};
+                background: #{$buttons_healthBarColor};
                 position: absolute;
                 z-index: 2;
             }

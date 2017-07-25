@@ -17,10 +17,13 @@
   padding: 0 3%;
   display: inline-block;
   line-height: 2em;
-  font-size: 15px; }
+  font-weight: 700; }
 
 .loadMore {
-  margin-left: 40%; }
+  margin: 1% 40% 3% 45%;
+  font-size: 15px; }
+  .loadMore:active {
+    background: green; }
 
 header {
   background: white;
@@ -59,7 +62,8 @@ header {
 
 .section_header {
   margin-bottom: 5vh;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  font-weight: 500; }
 
 .gnomeList {
   list-style: none; }
@@ -87,7 +91,7 @@ header {
     margin-top: 1.5em; }
     .gnomeList_gnome .gnomeList_gnome_div--right .gnomeList_gnome_healthBarWrapper {
       height: 10px;
-      border: 1px #EDEEF2;
+      border: 1px solid #EDEEF2;
       background: #EDEEF2;
       border-radius: 10px;
       width: 100%;
@@ -134,7 +138,8 @@ header {
       padding: 0 3%; }
 
 body {
-  background: #EDEEF2; }
+  background: #F9FAFC;
+  font-family: 'Work Sans', sans-serif; }
 
 .container {
   max-width: 1200px;

@@ -7,6 +7,7 @@ class EditGnome extends React.Component{
             newName: '',
             newAge: '',
             newStr: '',
+            buttonColor: '#AF0075',
         }
     }
 
@@ -33,6 +34,7 @@ class EditGnome extends React.Component{
     }
     handleUploadData=(e)=>{
         e.preventDefault();
+        
         const url = "http://master.datasource.jazzy-hr.jzapp.io/api/v1/gnomes"
         let data = {
             name: this.state.newName,
@@ -48,11 +50,12 @@ class EditGnome extends React.Component{
                     } else {
                         throw new Error("error");
                     }
-        }).then(  d=> {  
+        }).then(  d=> { 
             console.log('Request succeeded with JSON response', d);
-            this.closeForm();   //close form, after uploading data
+            alert('New data updated!');
+            this.closeForm(); //close form, after uploading data
         })  
-        .catch(error=> {  
+        .catch(error=> {
             console.log('Request failed', error);  
         });
 
@@ -60,7 +63,7 @@ class EditGnome extends React.Component{
     }
 
     render(){
-
+        
         return <div className="container">
             <form className="editGnome">
                 <div className="test"></div>
@@ -90,6 +93,7 @@ class EditGnome extends React.Component{
 
                 <input 
                 className="button"
+                style={{background: this.state.buttonColor }}
                 onClick={this.handleUploadData}
                 type="submit" value="SAVE"/>
             </form> 
