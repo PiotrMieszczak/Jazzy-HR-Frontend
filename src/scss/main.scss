@@ -1,4 +1,16 @@
+@import 'reset';
+@import 'header';
+@import 'gnomeList';
+@import 'gnomeDisplay';
+
+$container_width: 1200px;
+
+
+body{
+    background: #F9FAFC;
+}
 .container{
-    max-width: 1200px;
+    max-width: $container_width;
     margin: 0 auto;
+
 }

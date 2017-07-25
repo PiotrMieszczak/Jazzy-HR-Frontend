@@ -74,6 +74,7 @@ class GnomeList extends React.Component{
             }
             return <section>
                     <div className="container">
+                        <h1 className="section_header">gnomes</h1>
                         <ul className="gnomeList">
                             {gnomes}
                         </ul>

@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+header {
+  background: white;
+  margin-bottom: 5vh; }
+
+.navbar:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.navbar .navbar_div {
+  display: flex;
+  width: 40%;
+  text-transform: capitalize; }
+
+.navbar .navbar_div--left {
+  float: left;
+  justify-content: flex-start; }
+  .navbar .navbar_div--left .navbar_div--left_monsterTypeWrapper {
+    display: flex;
+    text-align: center;
+    margin-left: 30%; }
+    .navbar .navbar_div--left .navbar_div--left_monsterTypeWrapper .navbar_div--left_monsterType {
+      align-self: center;
+      margin-right: 30%; }
+
+.navbar .navbar_div--right {
+  float: right;
+  justify-content: flex-end; }
+  .navbar .navbar_div--right .navbar_div--right_button {
+    align-self: center;
+    border: 1px solid #AF0075;
+    border-radius: 10px;
+    background: #AF0075;
+    color: white;
+    text-align: center;
+    margin-right: 10%;
+    padding: 10px; }
+  .navbar .navbar_div--right .navbar_div--right_avatarWrapper {
+    display: flex; }
+    .navbar .navbar_div--right .navbar_div--right_avatarWrapper .navbar_div--right_Img {
+      max-height: 40px;
+      margin-right: 10%; }
+    .navbar .navbar_div--right .navbar_div--right_avatarWrapper .navbar_div--right_Info {
+      width: 10em; }
+
+body {
+  background: #F9FAFC; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto; }
