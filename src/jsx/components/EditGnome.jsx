@@ -63,15 +63,15 @@ class EditGnome extends React.Component{
 
         return <div className="container">
             <form className="editGnome">
-
-                <label className="editgnome_label"
+                <div className="test"></div>
+                <label className="editGnome_label"
                 key={'gnomeNameLabel'} htmlFor="name"><span>Name: {this.props.gn.name}</span></label>
                 <input 
                 onChange={this.handleChangeName}
                 value={this.state.newName}
                 key={'gnomeName'} type="text" name="name" placeholder="New name"/>
 
-                <label className="editgnome_label"
+                <label className="editGnome_label"
                 key={'gnomeAgeLabel'} htmlFor="age">
                 <span>Age: {this.props.gn.age}</span></label>
                 <input 
@@ -80,7 +80,7 @@ class EditGnome extends React.Component{
                 key={'gnomeAge'} type="text" name="age" placeholder="New age"/>
  
 
-                <label className="editgnome_label"
+                <label className="editGnome_label"
                 key={'gnomeStrLabel'} htmlFor="str">
                 <span>Strenght: {this.props.gn.strenght}</span></label>
                 <input 
