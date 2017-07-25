@@ -13,7 +13,7 @@ class Header extends React.Component{
                                 </div>
                             </div>
                             <div className="navbar_div navbar_div--right">
-                                <div className="navbar_div--right_button">create monster</div>
+                                <div className="button navbar_div--right_button">create monster</div>
                                 <div className="navbar_div--right_avatarWrapper">
                                     <img className="navbar_div--right_Img" src="src/assets/avatar.png" alt="avatar_pic"/>
                                     <div className="navbar_div--right_Info"><strong>robert łabuś</strong><br/>game master</div>
