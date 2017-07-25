@@ -71,7 +71,7 @@ class EditGnome extends React.Component{
                 >&#10006;</div>
                 <label className="editGnome_label"
                 key={'gnomeNameLabel'} htmlFor="name"><span>Name: {this.props.gn.name}</span></label>
-                <input 
+                <input className="editGnome_input"
                 onChange={this.handleChangeName}
                 value={this.state.newName}
                 key={'gnomeName'} type="text" name="name" placeholder="New name"/>
@@ -79,7 +79,7 @@ class EditGnome extends React.Component{
                 <label className="editGnome_label"
                 key={'gnomeAgeLabel'} htmlFor="age">
                 <span>Age: {this.props.gn.age}</span></label>
-                <input 
+                <input className="editGnome_input"
                 value={this.state.newAge}
                 onChange={this.handleChangeAge}
                 key={'gnomeAge'} type="text" name="age" placeholder="New age"/>
@@ -88,12 +88,12 @@ class EditGnome extends React.Component{
                 <label className="editGnome_label"
                 key={'gnomeStrLabel'} htmlFor="str">
                 <span>Strenght: {this.props.gn.strenght}</span></label>
-                <input 
+                <input className="editGnome_input"
                 value={this.state.newStr}
                 onChange={this.handleChangeStr}
                 key={'gnomeStr'} type="text" name="str" placeholder="New strenght"/>
 
-                <input 
+                <input className="editGnome_input"
                 className="button"
                 style={{background: this.state.buttonColor }}
                 onClick={this.handleUploadData}
