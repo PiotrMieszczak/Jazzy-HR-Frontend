@@ -6,13 +6,38 @@
         clear: both;
 
     }
-
-    .navbar_leftDiv{
+    .navbar_div{
+        display: flex;
+        width: 40%;
+    }
+    .navbar_div--left{
         float: left;
+        justify-content: flex-start;
 
+        .navbar_div--left_monsterTypeWrapper{
+            display: flex;
+            text-align: center;
+            .navbar_div--left_monsterType{
+                align-self: center;
+                margin-right: 20%;
+            }
         }
-    .navbar_rightDiv{
+    }
+    .navbar_div--right{
         float: right;
+        justify-content: flex-end;
+
+        .navbar_div--right_button{
+            align-self: center; 
+            border: 1px solid #AF0075;
+            background: #AF0075;
+            color: white;
+            text-align: center;
+            margin-right: 20%
+        }
+        .navbar_div--right_avatarWrapper{
+            display: flex;
+        }
     }
 
 
