@@ -59,7 +59,6 @@ class EditGnome extends React.Component{
             console.log('Request failed', error);  
         });
 
-        
     }
 
     render(){
@@ -98,7 +97,7 @@ class EditGnome extends React.Component{
                 style={{background: this.state.buttonColor }}
                 onClick={this.handleUploadData}
                 type="submit" value="SAVE"/>
-            </form> 
+            </form>
         </div>  
     }
 
