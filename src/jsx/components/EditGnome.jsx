@@ -62,29 +62,34 @@ class EditGnome extends React.Component{
     render(){
 
         return <div className="container">
-            <form >
-                <label key={'gnomeNameLabel'} htmlFor="name"><span>Name: {this.props.gn.name}</span><br/>New name:</label>
+            <form className="editgnome">
+                <label className="editgnome_label"
+                key={'gnomeNameLabel'} htmlFor="name"><span>Name: {this.props.gn.name}</span><br/>
+                <span className="boldText">New name:</span></label>
                 <input 
                 onChange={this.handleChangeName}
                 value={this.state.newName}
                 key={'gnomeName'} type="text" name="name"/><br/>
                 
-                <label key={'gnomeAgeLabel'} htmlFor="age">
+                <label className="editgnome_label"
+                 key={'gnomeAgeLabel'} htmlFor="age">
                 <span>Age: {this.props.gn.age}</span><br/>
-                New age:</label>
+                <span className="boldText">New age:</span></label>
                 <input 
                 value={this.state.newAge}
                 onChange={this.handleChangeAge}
                 key={'gnomeAge'} type="text" name="age"/><br/>
-                <label key={'gnomeStrLabel'} htmlFor="str">
+                <label className="editgnome_label"
+                key={'gnomeStrLabel'} htmlFor="str">
                 <span>Strenght: {this.props.gn.strenght}</span><br/>
-                New strenght:</label>
+                <span className="boldText">New strenght:</span></label>
                 <input 
                 value={this.state.newStr}
                 onChange={this.handleChangeStr}
                 key={'gnomeStr'} type="text" name="str"/><br/>
                 
                 <input 
+                className="button"
                 onClick={this.handleUploadData}
                 type="submit" value="SAVE"/>
             </form> 
