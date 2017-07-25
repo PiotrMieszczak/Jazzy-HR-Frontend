@@ -1,16 +1,11 @@
 header{
     background: white;
     margin-bottom: 10vh;
+    padding: 1%;
 }
 
 .navbar{
 
-    &:after{
-        content:"";
-        display: table;
-        clear: both;
-
-    }
     .navbar_div{
         display: flex;
         width: 40%;

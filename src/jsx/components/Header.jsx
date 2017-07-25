@@ -4,7 +4,7 @@ class Header extends React.Component{
     render(){
         return  <header>
                     <div className="container">
-                        <nav className="navbar">
+                        <nav className="navbar clearfix">
                             <div className="navbar_div navbar_div--left">
                                 <img className="navbar_div--left_logo" src="src/assets/logo.png" alt="logo_pic"/>
                                 <div className="navbar_div--left_monsterTypeWrapper">
