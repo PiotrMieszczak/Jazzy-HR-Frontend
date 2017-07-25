@@ -26,7 +26,6 @@ class Gnome extends React.Component{
 
         
     render(){ 
-            console.log(this.state.secondHealthBarWidth);
             return <li key={this.props.gnome.id}
                     onClick={e=>this.handleEditGnome(this.props.gnome)}
                     className="gnomeList_gnome clearfix">
@@ -48,7 +47,7 @@ class Gnome extends React.Component{
                                 </div>
                                 <div 
                                 className="gnomeList_gnome_strenght">{this.props.gnome.strenght}{'/100'}
-                                <span className="boldText gnomeList_gnome_strenght_boldText">strength</span>
+                                <span className="boldText gnomeList_gnome_strenght_boldText">Strength</span>
                                 </div>
                         </div>
                 </li>
