@@ -5,18 +5,18 @@ class Header extends React.Component{
         return  <header>
                     <div className="container">
                         <nav className="navbar">
-                            <div className="navbar_leftDiv">
-                                <img className="navbar_leftDiv_logo" src="src/assets/logo.png" alt="logo_pic"/>
-                                <div className="navbar_leftDiv_monsterTypeWrapper">
-                                    <div className="navbar_leftDiv_monsterType">gnomes</div>
-                                    <div className="navbar_leftDiv_monsterType">trolls</div>
+                            <div className="navbar_div navbar_div--left">
+                                <img className="navbar_div--left_logo" src="src/assets/logo.png" alt="logo_pic"/>
+                                <div className="navbar_div--left_monsterTypeWrapper">
+                                    <div className="navbar_div--left_monsterType">gnomes</div>
+                                    <div className="navbar_div--left_monsterType">trolls</div>
                                 </div>
                             </div>
-                            <div className="navbar_rightDiv">
-                                <div className="navbar_rightDiv_button">create monster</div>
-                                <div className="navbar_rightDiv_avatarWrapper">
-                                    <img className="navbar_rightDiv_Img" src="src/assets/avatar.png" alt="avatar_pic"/>
-                                    <div className="navbar_rightDiv_Info">robert łabuś<br/>game master</div>
+                            <div className="navbar_div navbar_div--right">
+                                <div className="navbar_div--right_button">create monster</div>
+                                <div className="navbar_div--right_avatarWrapper">
+                                    <img className="navbar_div--right_Img" src="src/assets/avatar.png" alt="avatar_pic"/>
+                                    <div className="navbar_div--right_Info"><strong>robert łabuś</strong><br/>game master</div>
                                 </div>
                             </div>
                         </nav>

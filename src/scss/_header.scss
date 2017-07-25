@@ -9,6 +9,7 @@
     .navbar_div{
         display: flex;
         width: 40%;
+        text-transform: capitalize;
     }
     .navbar_div--left{
         float: left;
@@ -17,10 +18,13 @@
         .navbar_div--left_monsterTypeWrapper{
             display: flex;
             text-align: center;
+            margin-left: 30%;
+
             .navbar_div--left_monsterType{
                 align-self: center;
-                margin-right: 20%;
+                margin-right: 30%;
             }
+
         }
     }
     .navbar_div--right{
@@ -30,14 +34,26 @@
         .navbar_div--right_button{
             align-self: center; 
             border: 1px solid #AF0075;
+            border-radius: 10px;
             background: #AF0075;
             color: white;
             text-align: center;
-            margin-right: 20%
+            margin-right: 10%;
+            padding: 10px;
+            width: 25%;
+
         }
         .navbar_div--right_avatarWrapper{
             display: flex;
+            .navbar_div--right_Img{
+                max-height: 40px;
+                margin-right: 10%;
+            }
+            .navbar_div--right_Info{
+                width: 10em;
+            }
         }
+    
     }
 
 
