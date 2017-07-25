@@ -1,13 +1,15 @@
 @import 'reset';
+@import 'variables';
+@import 'buttons';
 @import 'header';
 @import 'gnomeList';
 @import 'gnomeDisplay';
 
-$container_width: 1200px;
+
 
 
 body{
-    background: #EDEEF2;
+    background: $backgroundColor;
 }
 .container{
     max-width: $container_width;
@@ -19,14 +21,3 @@ body{
     font-weight: 700;
 }
 
-.button{
-    border: 1px solid #AF0075;
-    border-radius: 5px;
-    background: #AF0075;
-    color: white;
-    text-align: center;
-    padding: 0 5%;
-    display: inline-block;
-    line-height: 2em;
-    font-size:15px;
-}

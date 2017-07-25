@@ -1,0 +1,17 @@
+@import 'variables';
+
+.button{
+    border: 1px solid #{$buttons_healthBarColor};
+    border-radius: 5px;
+    background:  #{$buttons_healthBarColor};
+    color: white;
+    text-align: center;
+    padding: 0 3%;
+    display: inline-block;
+    line-height: 2em;
+    font-size:15px;
+}
+
+.loadMore{
+    margin:0 auto;
+}

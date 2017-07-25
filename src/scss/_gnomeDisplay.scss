@@ -1,8 +1,11 @@
 .gnomeList_gnome{
     background: white;
-    margin-bottom: 1vh;
-    padding:1%;
+    margin-bottom: 0.5vh;
+    padding:1% 2%;
 
+    &:first-of-type{
+        border-radius: 10px 10px 0 0;
+    }
     .gnomeList_gnome_div{
         width: 30%;
         display:flex;
@@ -29,8 +32,8 @@
 
         .gnomeList_gnome_healthBarWrapper{
             height: 10px;
-            border: 1px #EDEEF2;
-            background: #EDEEF2;
+            border: 1px $backgroundColor;
+            background: $backgroundColor;
             border-radius:10px;
             width: 100%;
             align-self: center;
@@ -39,16 +42,16 @@
             .gnomeList_gnome_healthBar{
                 height: 100%;
                 border-radius:10px;
-                border:1px solid #AF0075;
-                background: #AF0075;
+                border:1px solid $buttons_healthBarColor;
+                background: $buttons_healthBarColor;
                 position: absolute;
                 z-index: 2;
             }
             .gnomeList_gnome_healthBar_secondary{
                 height: 100%;
                 border-radius:10px;
-                border:1px solid #D8A6CB;
-                background: #D8A6CB;
+                border:1px solid $secondary_healthBarColor;
+                background: $secondary_healthBarColor;
                 position: absolute;
                 z-index: 1; 
             }
@@ -57,9 +60,10 @@
 
          .gnomeList_gnome_strenght{
                 font-size: 14px;
-                margin-left:3%;
+                margin-left:5%;
                 .gnomeList_gnome_strenght_boldText{
-                    margin-left:5%;
+                    font-size: 14px;
+                    margin-left:10%;
                 }
             }
     }
