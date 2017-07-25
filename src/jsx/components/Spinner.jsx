@@ -4,10 +4,12 @@ import React from 'react';
 
 class Spinner extends React.Component{
     render(){
-        return <div className="spinner">
-                        <div className="spinner_dot1"></div>
-                        <div className="spinner_dot2"></div>
-                </div>
+        return <section className="spinner">
+                <div className="spinner_mainSpinner">
+                            <div className="spinner_mainSpinner_dot1"></div>
+                            <div className="spinner_mainSpinner_dot2"></div>
+                 </div>
+            </section>
     }
 
 }

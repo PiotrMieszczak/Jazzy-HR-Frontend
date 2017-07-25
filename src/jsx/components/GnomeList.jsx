@@ -2,6 +2,7 @@ import React from "react";
 import Gnome from "./Gnome.jsx";
 import LoadMore from "./LoadMore.jsx";
 import EditGnome from "./EditGnome.jsx";
+import Spinner from "./Spinner.jsx";
 
 class GnomeList extends React.Component{
         constructor(props){
@@ -19,6 +20,7 @@ class GnomeList extends React.Component{
 
             const url = "http://master.datasource.jazzy-hr.jzapp.io/api/v1/gnomes?"
             fetch(url+`&limit=${limit}&offset=0`)
+
             .then(response => {
                     if(response.ok) { 
                         return response.json()
@@ -29,6 +31,7 @@ class GnomeList extends React.Component{
                     this.setState({
                         response,
                         limit,
+                        loaded: true,
                     })
 
             }).catch( error=> {  
@@ -66,8 +69,10 @@ class GnomeList extends React.Component{
                 key={gnome.id} 
                 gnome={gnome}/>
             })
-
-            if(this.state.displayForm){
+            if(!this.state.loaded){ 
+                return <Spinner />; //load spinner fn untill receiving data from API
+            }else{
+                if(this.state.displayForm){
                 return <EditGnome
                         closeForm={this.handleCloseForm}
                         gn={this.state.editedGnome}/>
@@ -80,7 +85,8 @@ class GnomeList extends React.Component{
                         </ul>
                         <LoadMore moreGnomes={this.handleLoadMoreGnomes}/>
                     </div>
-               </section>        
+               </section> 
+            }    
         }
 
     

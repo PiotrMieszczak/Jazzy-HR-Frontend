@@ -146,6 +146,57 @@ header {
       margin-top: 2%;
       padding: 0 3%; }
 
+.spinner {
+  height: 80vh;
+  width: 100vw;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0; }
+  .spinner .spinner_mainSpinner {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: rotate 1s infinite; }
+    .spinner .spinner_mainSpinner .spinner_mainSpinner_dot1 {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      top: 50px;
+      left: 50px;
+      border: 1px solid #AF0075;
+      background-color: #AF0075;
+      border-radius: 50%;
+      animation: bounce 2s infinite; }
+    .spinner .spinner_mainSpinner .spinner_mainSpinner_dot2 {
+      position: absolute;
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      top: 50px;
+      left: 70px;
+      border: 1px solid orangered;
+      border-radius: 50%;
+      background-color: orangered;
+      animation: bounce 2s infinite;
+      animation-delay: -1s; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes bounce {
+  0% {
+    transform: scale(0); }
+  50% {
+    transform: scale(1); }
+  100% {
+    transform: scale(0); } }
+
 body {
   background: #F9FAFC;
   font-family: 'Work Sans', sans-serif; }
