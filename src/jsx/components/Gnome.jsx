@@ -26,9 +26,8 @@ class Gnome extends React.Component{
             return <li key={this.props.gnome.id}
                     onClick={e=>this.handleEditGnome(this.props.gnome)}
                     className="gnomeList_gnome">
-                        <div className="gnomeList_div--left">
-                                <div
-                                className="gnomeList_gnome_logo"></div>
+                        <div className="gnomeList_gnome_div--left">
+                                <img src="src/assets/gnome_logo.png" alt="gnome_logo"/>
                                 <div
                                 className="gnomeList_gnome_name&age">
                                         <p className="boldText">{this.props.gnome.name}</p>
@@ -36,7 +35,7 @@ class Gnome extends React.Component{
                                 </div>
                         </div>
 
-                        <div className="gnomeList_div--right">
+                        <div className="gnomeList_gnome_div--right">
                                 <div className="gnomeList_gnome_healthBarWrapper">
                                         <div className="gnomeList_gnome_healthBar"
                                         style={{width: this.state.healthBarWidth}}></div>
