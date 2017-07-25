@@ -66,9 +66,9 @@ class EditGnome extends React.Component{
         return <div className="container">
             
             <form className="editGnome">
-                <div className="exitButton"
+                <div className="editGnome_exitButton"
                 onClick={this.closeForm}
-                >&#10006;</div>
+                >&#8592;</div>
                 <label className="editGnome_label"
                 key={'gnomeNameLabel'} htmlFor="name"><span>Name: {this.props.gn.name}</span></label>
                 <input className="editGnome_input"

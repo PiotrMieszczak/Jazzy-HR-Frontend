@@ -1,5 +1,3 @@
-@import 'variables';
-
 .editGnome{
     display:flex;
     margin-left: 30%;
@@ -12,6 +10,14 @@
         margin: 0 auto;
     }
 
+    .editGnome_exitButton{
+            align-self: flex-start;
+            font-size: 50px;
+            color: #AF0075;
+        &:hover{
+            color: #{$buttons_HoverColor};
+        }
+    }
     .editGnome_input{
         margin-bottom: 1%;
 

@@ -10,6 +10,11 @@
     display: inline-block;
     line-height: 2em;
     font-weight: 700;
+
+     &:hover{
+            background: #{$buttons_HoverColor};
+            border-color: #{$buttons_HoverColor};
+        }
 }
 
 .loadMore{

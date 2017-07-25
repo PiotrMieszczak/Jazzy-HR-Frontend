@@ -18,6 +18,9 @@
   display: inline-block;
   line-height: 2em;
   font-weight: 700; }
+  .button:hover {
+    background: gray;
+    border-color: gray; }
 
 .loadMore {
   margin: 1% 40% 3% 45%;
@@ -127,13 +130,19 @@ header {
   align-items: center; }
   .editGnome .button {
     margin: 0 auto; }
-  .editGnome input {
+  .editGnome .editGnome_exitButton {
+    align-self: flex-start;
+    font-size: 50px;
+    color: #AF0075; }
+    .editGnome .editGnome_exitButton:hover {
+      color: gray; }
+  .editGnome .editGnome_input {
     margin-bottom: 1%;
     padding: 10px;
     border: solid 1px #fff;
     box-shadow: inset 1px 1px 2px 0 #707070;
     transition: box-shadow 0.5s; }
-    .editGnome input.button {
+    .editGnome .editGnome_input.button {
       margin-top: 2%;
       padding: 0 3%; }
 
