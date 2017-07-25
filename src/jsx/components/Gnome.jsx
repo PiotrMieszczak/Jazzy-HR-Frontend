@@ -5,6 +5,7 @@ class Gnome extends React.Component{
                 super(props);
                 this.state={
                         healthBarWidth: '',
+                        secondHealthBarWidth: '',
                 }
         }
     handleEditGnome=(gnome)=>{
@@ -15,14 +16,17 @@ class Gnome extends React.Component{
 
     componentDidMount(){
         let barWidth = Math.floor(Math.random() * 90 + 10)+'%' ;
+        let secondBarWidth = Math.floor(Math.random() * 90 + 10)+'%';
+
         this.setState({
                 healthBarWidth: barWidth,
+                secondHealthBarWidth: secondBarWidth,
         })
     }
 
         
     render(){ 
-
+            console.log(this.state.secondHealthBarWidth);
             return <li key={this.props.gnome.id}
                     onClick={e=>this.handleEditGnome(this.props.gnome)}
                     className="gnomeList_gnome clearfix">
@@ -39,10 +43,12 @@ class Gnome extends React.Component{
                                 <div className="gnomeList_gnome_healthBarWrapper">
                                         <div className="gnomeList_gnome_healthBar"
                                         style={{width: this.state.healthBarWidth}}></div>
+                                        <div className="gnomeList_gnome_healthBar_secondary"
+                                                style={{width: this.state.secondHealthBarWidth}}></div>
                                 </div>
                                 <div 
                                 className="gnomeList_gnome_strenght">{this.props.gnome.strenght}{'/100'}
-                                <span className="boldText">strength</span>
+                                <span className="boldText gnomeList_gnome_strenght_boldText">strength</span>
                                 </div>
                         </div>
                 </li>

@@ -1,0 +1,66 @@
+.gnomeList_gnome{
+    background: white;
+    margin-bottom: 1vh;
+    padding:1%;
+
+    .gnomeList_gnome_div{
+        width: 30%;
+        display:flex;
+
+    }
+    .gnomeList_gnome_div--left{
+        float: left;
+        justify-content: flex-start;
+
+        .gnomeList_gnome_div_logo{
+            width:60px;
+            height:60px;
+            margin-right: 3%;
+        }
+
+        .gnomeList_gnome_info{
+            align-self: center;
+        }
+    }
+
+    .gnomeList_gnome_div--right{
+        float: right;
+        margin-top:1.5em;
+
+        .gnomeList_gnome_healthBarWrapper{
+            height: 10px;
+            border: 1px #EDEEF2;
+            background: #EDEEF2;
+            border-radius:10px;
+            width: 100%;
+            align-self: center;
+            position: relative;
+
+            .gnomeList_gnome_healthBar{
+                height: 100%;
+                border-radius:10px;
+                border:1px solid #AF0075;
+                background: #AF0075;
+                position: absolute;
+                z-index: 2;
+            }
+            .gnomeList_gnome_healthBar_secondary{
+                height: 100%;
+                border-radius:10px;
+                border:1px solid #D8A6CB;
+                background: #D8A6CB;
+                position: absolute;
+                z-index: 1; 
+            }
+              
+        }
+
+         .gnomeList_gnome_strenght{
+                font-size: 14px;
+                margin-left:3%;
+                .gnomeList_gnome_strenght_boldText{
+                    margin-left:5%;
+                }
+            }
+    }
+}
