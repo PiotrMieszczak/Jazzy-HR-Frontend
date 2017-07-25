@@ -13,6 +13,6 @@ Load More - button at the end of table, it will load 100 more gnomes from API on
 Gnome edit - you can edit name, age, strenght of your favorite gnome. Just click on table cell to display form. <br/> 
 
 
-<b>API will randomly return errors and  it will not get updated data! <br/>
+<b>API will randomly return errors and data will not be stored. <br/>
 Alert 'New data updated' will be displayed upon successful data PATCH.</b>
 
