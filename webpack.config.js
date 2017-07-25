@@ -7,6 +7,7 @@ module.exports = {
     },
     output : {
         path: __dirname+'/',
+        publicPath: __dirname+'/',
         filename: '[name]'
     },
     watch: true,
@@ -28,10 +29,6 @@ module.exports = {
                     fallback: 'style-loader',
                     use: ['css-loader', 'sass-loader']
                 })
-            },
-            {
-                test: /\.(eot|svg|ttf|woff|woff2)$/,
-                loader: 'url-loader?limit=100000'
             },
             {
                 test: /\.(png|jpg)$/,
