@@ -61,32 +61,34 @@ class EditGnome extends React.Component{
 
     render(){
 
-        return <form>
-            <label key={'gnomeNameLabel'} htmlFor="name"><span>Name: {this.props.gn.name}</span><br/>New name:</label>
-            <input 
-            onChange={this.handleChangeName}
-            value={this.state.newName}
-            key={'gnomeName'} type="text" name="name"/><br/>
-            
-            <label key={'gnomeAgeLabel'} htmlFor="age">
-            <span>Age: {this.props.gn.age}</span><br/>
-            New age:</label>
-            <input 
-            value={this.state.newAge}
-            onChange={this.handleChangeAge}
-            key={'gnomeAge'} type="text" name="age"/><br/>
-            <label key={'gnomeStrLabel'} htmlFor="str">
-            <span>Strenght: {this.props.gn.strenght}</span><br/>
-            New strenght:</label>
-            <input 
-            value={this.state.newStr}
-            onChange={this.handleChangeStr}
-            key={'gnomeStr'} type="text" name="str"/><br/>
-            
-            <input 
-            onClick={this.handleUploadData}
-            type="submit" value="SAVE"/>
-        </form>    
+        return <div className="container">
+            <form >
+                <label key={'gnomeNameLabel'} htmlFor="name"><span>Name: {this.props.gn.name}</span><br/>New name:</label>
+                <input 
+                onChange={this.handleChangeName}
+                value={this.state.newName}
+                key={'gnomeName'} type="text" name="name"/><br/>
+                
+                <label key={'gnomeAgeLabel'} htmlFor="age">
+                <span>Age: {this.props.gn.age}</span><br/>
+                New age:</label>
+                <input 
+                value={this.state.newAge}
+                onChange={this.handleChangeAge}
+                key={'gnomeAge'} type="text" name="age"/><br/>
+                <label key={'gnomeStrLabel'} htmlFor="str">
+                <span>Strenght: {this.props.gn.strenght}</span><br/>
+                New strenght:</label>
+                <input 
+                value={this.state.newStr}
+                onChange={this.handleChangeStr}
+                key={'gnomeStr'} type="text" name="str"/><br/>
+                
+                <input 
+                onClick={this.handleUploadData}
+                type="submit" value="SAVE"/>
+            </form> 
+        </div>  
     }
 
 }
